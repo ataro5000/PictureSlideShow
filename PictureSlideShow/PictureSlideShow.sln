@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PictureSlideShow", "PictureSlideShow.csproj", "{B0F0014F-7D06-C55C-E533-3D5153A315CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0F0014F-7D06-C55C-E533-3D5153A315CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0F0014F-7D06-C55C-E533-3D5153A315CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0F0014F-7D06-C55C-E533-3D5153A315CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0F0014F-7D06-C55C-E533-3D5153A315CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF58B803-64F6-4096-8AAA-21496918D2AA}
+	EndGlobalSection
+EndGlobal

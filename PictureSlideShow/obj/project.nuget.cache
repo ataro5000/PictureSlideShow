@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Syf3x+qTK7Q=",
+  "success": true,
+  "projectFilePath": "C:\\School\\COMP466\\TMA3A\\PictureSlideShow\\PictureSlideShow\\PictureSlideShow.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Shane Edwards\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.5\\microsoft.aspnetcore.openapi.9.0.5.nupkg.sha512",
+    "C:\\Users\\Shane Edwards\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}

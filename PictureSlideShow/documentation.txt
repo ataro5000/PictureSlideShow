@@ -1,0 +1,28 @@
+- Okay lets start this rev. file. 
+
+- first off i had a hard time getting this up and running as I couldnt figure out how to integrate this into html etc. 
+dotnet was its own learning curve and I have barely scratched the surface. I found the microsoft.com learning files
+to be alot more helpful than the provided text. Its probably way to out of date at this point. 
+Tech, has a way of making dinosaurs rather quickly. 
+
+- through a bit of research I found https://getbootstrap.com/docs/5.3/components/carousel/#autoplaying-carousels 
+
+Which I will use to set up an autoplayer and work around this tool for my web app. 
+
+Setting up html and controls with 3 images hardcoded to start. 
+- working slide show, 
+- now adding json integration, class files, controllers for C# integration.
+- I will definetly need a review on javascript after this to really get my bearings for the next part. 
+- added json file for loading my images w/ descriptions title. in lew of a DB. 
+- adding random/sequential javascript 
+- starting and stopping the slideshow was a bit more difficult because of the bootstrap integration, had to do a bit more research for this. 
+- had to implement the pausing funcition that is normally used to pause the photo on mouseover. 
+- this worked well until you hit the next button which started the carousels cycle() method. Adding a isPlaying bool to track stopped behaviour. 
+ - adding some console.logs to track if its playing or not for troubleshooting. 
+ - still no gravy.,..
+  - under further investigation in the bootstrap. the pause feature is moreso for touch screen behaviour, it also after done being "touched" or "hovered" will automaticlly start playing again after 2 cycles. 
+  - so if i set the cycle to 0 in the after hitting stop it should work.  carouselInstance._config.interval = 0; seeemed to do it. removing console debuggers. 
+  - i started getting an error aswell when hard reseting that would mess with JS settings. GET http://localhost:5141/favicon.ico 404 (Not Found). added the file to wwwroot and the JS loaded in fine now. 
+  - this was a wierd one to troubleshooting lots of interesting errorless symptoms. 
+  - This still seemed like more of a clientside exercise as most of the controls were client side. Mostly just the picture generation serverside. 
+  
