@@ -16,10 +16,11 @@ C:\School\COMP466\TMA3A\PictureSlideShow\PictureSlideShow\obj\Debug\net9.0\Pictu
 C:\School\COMP466\TMA3A\PictureSlideShow\PictureSlideShow\obj\Debug\net9.0\PictureSlideShow.csproj.CoreCompileInputs.cache
 C:\School\COMP466\TMA3A\PictureSlideShow\PictureSlideShow\obj\Debug\net9.0\PictureSlideShow.MvcApplicationPartsAssemblyInfo.cs
 C:\School\COMP466\TMA3A\PictureSlideShow\PictureSlideShow\obj\Debug\net9.0\PictureSlideShow.MvcApplicationPartsAssemblyInfo.cache
+C:\School\COMP466\TMA3A\PictureSlideShow\PictureSlideShow\obj\Debug\net9.0\PictureSlideShow.sourcelink.json
 C:\School\COMP466\TMA3A\PictureSlideShow\PictureSlideShow\obj\Debug\net9.0\scopedcss\bundle\PictureSlideShow.styles.css
 C:\School\COMP466\TMA3A\PictureSlideShow\PictureSlideShow\obj\Debug\net9.0\compressed\z9ankexlf6-f8m4886f4m.gz
 C:\School\COMP466\TMA3A\PictureSlideShow\PictureSlideShow\obj\Debug\net9.0\compressed\ixs0dur110-5ipweew5fc.gz
-C:\School\COMP466\TMA3A\PictureSlideShow\PictureSlideShow\obj\Debug\net9.0\compressed\9elgvvhggv-65kaldgn6l.gz
+C:\School\COMP466\TMA3A\PictureSlideShow\PictureSlideShow\obj\Debug\net9.0\compressed\hh4sjp6umu-65kaldgn6l.gz
 C:\School\COMP466\TMA3A\PictureSlideShow\PictureSlideShow\obj\Debug\net9.0\staticwebassets.build.json
 C:\School\COMP466\TMA3A\PictureSlideShow\PictureSlideShow\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\School\COMP466\TMA3A\PictureSlideShow\PictureSlideShow\obj\Debug\net9.0\staticwebassets.development.json
@@ -30,5 +31,8 @@ C:\School\COMP466\TMA3A\PictureSlideShow\PictureSlideShow\obj\Debug\net9.0\refin
 C:\School\COMP466\TMA3A\PictureSlideShow\PictureSlideShow\obj\Debug\net9.0\PictureSlideShow.pdb
 C:\School\COMP466\TMA3A\PictureSlideShow\PictureSlideShow\obj\Debug\net9.0\PictureSlideShow.genruntimeconfig.cache
 C:\School\COMP466\TMA3A\PictureSlideShow\PictureSlideShow\obj\Debug\net9.0\ref\PictureSlideShow.dll
-C:\School\COMP466\TMA3A\PictureSlideShow\PictureSlideShow\obj\Debug\net9.0\compressed\xzvik5pk7r-rrdxou76js.gz
-C:\School\COMP466\TMA3A\PictureSlideShow\PictureSlideShow\obj\Debug\net9.0\compressed\lci27yk3wc-lnft6co5r3.gz
+C:\School\COMP466\TMA3A\PictureSlideShow\PictureSlideShow\obj\Debug\net9.0\compressed\3ak6cp8jxl-ygu6sgesdl.gz
+C:\School\COMP466\TMA3A\PictureSlideShow\PictureSlideShow\obj\Debug\net9.0\compressed\xzvik5pk7r-pa5o79j8i2.gz
+C:\School\COMP466\TMA3A\PictureSlideShow\PictureSlideShow\obj\Debug\net9.0\compressed\x2amz4gsif-0ydhfdlg40.gz
+C:\School\COMP466\TMA3A\PictureSlideShow\PictureSlideShow\obj\Debug\net9.0\compressed\b2i6a37w2v-fsk4boc3fv.gz
+C:\School\COMP466\TMA3A\PictureSlideShow\PictureSlideShow\obj\Debug\net9.0\compressed\rn7svjf3ux-ytlbil31e1.gz

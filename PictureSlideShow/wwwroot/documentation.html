@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation</title>
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/doc.css" />
+</head>
+<body>
+    <div class="head">
+        <div class="head-left-section">
+            <a class="head-link" href="index.html">
+                Slide Show
+            </a>
+        </div>
+        <div class="head-middle-section">
+
+        </div>
+        <div class="head-right-section">
+
+        </div>
+    </div>
+    <div class="body-doc">
+        <h1 class="h1-doc">Documentation for Picture Slide Show</h1>
+        <section class="documentation-section" id="description">
+            <h2 class="documentation-header">1. Description</h2>
+            <p class="doc-p"><b>Picture Slide Show</b> is a web-based application built with ASP.NET and C#. It allows
+                users to view a slideshow of curated images, each accompanied by a descriptive caption. The application
+                is designed for ease of use and provides both automated and manual controls for navigating the
+                slideshow.</p>
+            <p class="doc-p">Key features include:</p>
+            <ul>
+                <li>Server-side storage of picture information (name, location/URL, and description) in a text file or
+                    database</li>
+                <li>Captions displayed under each picture during the slideshow</li>
+                <li>Start/Stop button to control the slideshow playback</li>
+                <li>Toggle to switch between random and sequential slideshow modes</li>
+                <li>Manual forward and backward navigation buttons (available in sequential mode)</li>
+                <li>At least 20 high-quality images included in the show</li>
+            </ul>
+            <p class="doc-p"></p>
+        </section>
+
+        <section class="documentation-section" id="Analysis-And-Design">
+            <h2 class="documentation-header">2. Analysis and Design</h2>
+
+            <h3 class="documentation-subheader">2.1 Requirements Analysis</h3>
+            <p class="doc-p">The Picture Slide Show application must fulfill the following requirements:</p>
+            <ul>
+                <li>Store information about each picture (name, location/URL, and description) on the server in a text
+                    file or database.</li>
+                <li>Display a caption under each picture during the slideshow.</li>
+                <li>Provide a button to start and stop the slideshow.</li>
+                <li>Allow toggling between random and sequential slideshow modes.</li>
+                <li>Enable manual forward and backward navigation in sequential mode.</li>
+                <li>Include at least 20 high-quality images in the slideshow.</li>
+                <li>Offer a user-friendly and responsive interface for interacting with the slideshow.</li>
+            </ul>
+
+            <h3 class="documentation-subheader">2.2 Architectural Design</h3>
+            <ul>
+                <li><strong>Frontend:</strong> ASP.NET Razor Pages are used to render the user interface, display images
+                    and captions, and provide slideshow controls.</li>
+                <li><strong>Backend:</strong> C# code handles reading picture data from the server (text file or
+                    database), manages slideshow state, and serves image information to the frontend.</li>
+                <li><strong>Data Storage:</strong> Picture metadata (name, URL, description) is stored in a structured
+                    text file or database table on the server.</li>
+                <li><strong>Slideshow Logic:</strong> The backend manages the current slideshow mode (random or
+                    sequential) and responds to user actions (start, stop, next, previous).</li>
+                <li><strong>Client-Side Scripting:</strong> JavaScript may be used for smooth transitions, timer-based
+                    slideshow playback, and UI responsiveness.</li>
+            </ul>
+
+            <h3 class="documentation-subheader">2.3 Workflow Design</h3>
+            <ol>
+                <li>On application start, the server loads picture metadata from the storage file or database.</li>
+                <li>The main page displays the first image and its caption, along with slideshow controls.</li>
+                <li>When the user starts the slideshow, images advance automatically based on the selected mode (random
+                    or sequential).</li>
+                <li>Users can pause the slideshow at any time using the Start/Stop button.</li>
+                <li>In sequential mode, users can manually navigate forward or backward through the images.</li>
+                <li>Captions are always displayed under the current image.</li>
+            </ol>
+
+            <h3 class="documentation-subheader">2.4 Security and Data Integrity</h3>
+            <ul>
+                <li>All picture metadata is stored server-side to prevent tampering.</li>
+                <li>User actions are limited to slideshow navigation; no sensitive data is collected or stored.</li>
+                <li>Input validation is performed on any user-supplied data (if applicable) to prevent injection
+                    attacks.</li>
+                <li>Images are served from trusted locations to avoid broken links or malicious content.</li>
+            </ul>
+        </section>
+
+        <section class="documentation-section" id="Implementation">
+            <h2 class="documentation-header">3. Implementation</h2>
+
+            <h3 class="documentation-subheader">3.1 Key Features Implementation</h3>
+            <ul>
+                <li><strong>Picture Metadata Storage:</strong> The server stores information about each picture (name,
+                    file path or URL, and description) in a structured text file or database. This metadata is loaded
+                    when the application starts and is used to drive the slideshow.</li>
+                <li><strong>Slideshow Controls:</strong> The user interface provides buttons to start and stop the
+                    slideshow, toggle between random and sequential modes, and manually navigate forward or backward (in
+                    sequential mode).</li>
+                <li><strong>Image and Caption Display:</strong> Each image is displayed with its corresponding caption
+                    beneath it, as specified in the metadata.</li>
+                <li><strong>Slideshow Logic:</strong> The backend manages the current slideshow state, including the
+                    current image index and mode (random or sequential). It responds to user actions and updates the UI
+                    accordingly.</li>
+                <li><strong>Client-Side Enhancements:</strong> JavaScript is used for smooth image transitions,
+                    timer-based automatic playback, and responsive UI updates without full page reloads.</li>
+                <li><strong>Image Quality:</strong> At least 20 high-quality images are included in the application,
+                    either reused from previous assignments or newly added.</li>
+            </ul>
+
+            <h3 class="documentation-subheader">3.2 File Structure & Responsibilities</h3>
+            <table class="doc-file-table">
+                <tr>
+                    <th>File</th>
+                    <th>Location</th>
+                    <th>Responsibilities</th>
+                </tr>
+                <tr>
+                    <td>Index.html</td>
+                    <td>wwwroot/</td>
+                    <td>Main page displaying the slideshow, images, captions, and controls.</td>
+                </tr>
+
+                <tr>
+                    <td>pictures.json</td>
+                    <td>wwwroot/data/</td>
+                    <td>Stores picture metadata (name, URL, description) for the slideshow.</td>
+                </tr>
+                <tr>
+                    <td>script.js</td>
+                    <td>wwwroot/js/</td>
+                    <td>JavaScript for slideshow transitions, timers, and UI responsiveness.</td>
+                </tr>
+                <tr>
+                    <td>all css in here</td>
+                    <td>wwwroot/css/</td>
+                    <td>Styling for the slideshow and documentation pages.</td>
+                </tr>
+                <tr>
+                    <td>images1 - 20.jpg</td>
+                    <td>wwwroot/images/</td>
+                    <td>Contains all slideshow images.</td>
+                </tr>
+            </table>
+
+            <h3 class="documentation-subheader">3.3 Notable Implementation Details</h3>
+            <ul>
+                <li>Picture metadata is loaded once at application start for performance and consistency.</li>
+                <li>Slideshow state (current index, mode) is managed server-side and updated based on user actions.</li>
+                <li>Manual navigation is only enabled in sequential mode; in random mode, navigation is disabled or
+                    randomized.</li>
+                <li>All user interactions are validated to prevent invalid requests or errors.</li>
+                <li>Images are served from the server's static files directory to ensure reliability and security.</li>
+                <li>Responsive design ensures the slideshow works well on both desktop and mobile devices.</li>
+            </ul>
+        </section>
+
+        <section class="documentation-section" id="UserGuide">
+            <h2 class="documentation-header">4. User Guide</h2>
+
+            <h3 class="documentation-subheader">4.1 Getting Started</h3>
+            <ol>
+                <li>Open the Picture Slide Show web application in your browser.</li>
+                <li>The main page will display the first image in the slideshow along with its caption.</li>
+                <li>Use the available controls to interact with the slideshow as described below.</li>
+            </ol>
+
+            <h3 class="documentation-subheader">4.2 Features Overview</h3>
+            <ul>
+                <li><strong>Start/Stop:</strong> Click the Start button to begin the slideshow. Click Stop to pause it
+                    at the current image.</li>
+                <li><strong>Random/Sequential Toggle:</strong> Switch between random and sequential slideshow modes
+                    using the toggle control.</li>
+                <li><strong>Manual Navigation:</strong> In sequential mode, use the forward and backward buttons to
+                    manually move through the images.</li>
+                <li><strong>Captions:</strong> Each image is displayed with a descriptive caption beneath it.</li>
+                <li><strong>Responsive Design:</strong> The application is designed to work on both desktop and mobile
+                    devices.</li>
+            </ul>
+
+            <h3 class="documentation-subheader">4.3 Notes for Users</h3>
+            <ul>
+                <li>All images and captions are curated and stored on the "server" for reliability.</li>
+                <li>No login or registration is required to use the slideshow.</li>
+                <li>If you encounter any issues with image loading, ensure your internet connection is active and try
+                    refreshing the page.</li>
+            </ul>
+
+            <h3 class="documentation-subheader">4.4 Development Process & Lessons Learned</h3>
+            <ul>
+                <li>Initial setup was challenging, especially integrating .NET with HTML. The <a
+                        href="https://learn.microsoft.com/">Microsoft.com learning resources</a> were more helpful than
+                    the provided text, which felt outdated.</li>
+                <li>Discovered and used <a
+                        href="https://getbootstrap.com/docs/5.3/components/carousel/#autoplaying-carousels">Bootstrap
+                        Carousel</a> for implementing the slideshow's autoplay feature.</li>
+                <li>Began with three hardcoded images and basic controls to establish the slideshow functionality.</li>
+                <li>Progressed to adding JSON integration, C# class files, and controllers for server-side data
+                    handling.</li>
+                <li>Opted for a JSON file to store image data and descriptions instead of a database for simplicity.
+                </li>
+                <li>Implemented random/sequential slideshow logic using JavaScript.</li>
+                <li>Integrating start/stop controls with Bootstrap Carousel required additional research and
+                    troubleshooting, especially to handle pausing and resuming correctly.</li>
+                <li>Added an <code>isPlaying</code> boolean and used <code>carouselInstance._config.interval = 0;</code>
+                    to control autoplay behavior after stopping.</li>
+                <li>Encountered a favicon loading error (<code>favicon.ico 404</code>) that interfered with JavaScript
+                    loading; resolved by adding the favicon to <code>wwwroot</code>.</li>
+                <li>Most slideshow controls and logic were ultimately handled client-side, with server-side code mainly
+                    responsible for generating the image list.</li>
+                <li>Recognized the need for further study in JavaScript for future enhancements.</li>
+            </ul>
+        </section>
+
+        <section class="documentation-section" id="Links">
+            <h2 class="documentation-header">5. Links</h2>
+            <p class="doc-p">5.1 FreeCodeCamp: Responsive Web Design. <a
+                    href="https://www.freecodecamp.org/learn/2022/responsive-web-design/">FreeCodeCamp Responsive Web
+                    Design</a></p>
+            <p class="doc-p">5.2 W3Schools is a great reference for all things web development. <a
+                    href="https://www.w3schools.com/">W3Schools</a></p>
+            <p class="doc-p">5.3 Use this tool to validate your HTML files. <a href="https://validator.w3.org/">W3
+                    Validator</a></p>
+            <p class="doc-p">5.4 Great reference for all things PHP. <a href="https://www.phptutorial.net/">PHP
+                    Tutorial</a>
+            </p>
+            <p class="doc-p">5.5 Microsoft ASP.NET Core documentation and tutorials. <a
+                    href="https://learn.microsoft.com/en-us/aspnet/core/?view=aspnetcore-8.0">ASP.NET Core Docs</a></p>
+            <p class="doc-p">5.6 Microsoft C# documentation and tutorials. <a
+                    href="https://learn.microsoft.com/en-us/dotnet/csharp/">C# Docs</a></p>
+            <p class="doc-p">5.7 Razor Pages official documentation. <a
+                    href="https://learn.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-8.0">Razor Pages
+                    Docs</a></p>
+            <p class="doc-p">5.8 Mozilla Developer Network (MDN) JavaScript Reference. <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">MDN JavaScript</a></p>
+            <p class="doc-p">Bootstrap documentation <a href="https://getbootstrap.com/docs/">Bootstrap
+                    documentation</a></p>
+        </section>
+
+        <section class="documentation-section" id="Notes">
+            <h2 class="documentation-header">6. Notes</h2>
+
+            <h3 class="documentation-subheader">6.1 General Notes & Hypothetical Development Scenarios</h3>
+            <ol>
+                <li><strong>JSON Loading Headaches</strong>:
+                    <ul>
+                        <li>I decided to use a JSON file to store my image data instead of a database. At first, the
+                            images wouldn't load at all. After a lot of console logging, I figured out I had a typo in
+                            the file path. It was a good reminder to always double-check file locations, especially with
+                            case sensitivity on different systems.</li>
+                    </ul>
+                </li>
+                <li><strong>Random Mode Logic Bug</strong>:
+                    <ul>
+                        <li>Implementing the random mode for the slideshow seemed easy, but I kept getting repeated
+                            images back-to-back. I realized I needed to track the last shown index and avoid repeating
+                            it. After adding a simple check, the random mode felt much smoother for the user.</li>
+                    </ul>
+                </li>
+                <li><strong>Start/Stop Button Confusion</strong>:
+                    <ul>
+                        <li>Getting the Start/Stop button to work with the Bootstrap carousel was trickier than
+                            expected. Sometimes, clicking Stop would pause the slideshow, but clicking Start wouldn't
+                            always resume it. I eventually learned that Bootstrap's <code>cycle()</code> and
+                            <code>pause()</code> methods needed to be managed carefully, and I had to use a custom
+                            <code>isPlaying</code> flag to keep track of the state.</li>
+                    </ul>
+                </li>
+                <li><strong>Image Not Found Error</strong>:
+                    <ul>
+                        <li>During testing, I kept seeing broken image icons. After some digging, I realized I had
+                            forgotten to copy a few images into the <code>wwwroot/images/</code> folder. It was a simple
+                            fix, but it taught me to always verify that all assets are present before running the app.
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Mobile Responsiveness Surprise</strong>:
+                    <ul>
+                        <li>I checked the slideshow on my phone and noticed the captions overlapped the images. I hadn't
+                            tested on mobile until late in the process. A few tweaks to the CSS fixed it, but it was a
+                            good lesson to test on multiple devices early.</li>
+                    </ul>
+                </li>
+                <li><strong>Documentation Realization</strong>:
+                    <ul>
+                        <li>Writing this documentation made me realize how many small decisions and fixes I made along
+                            the way. It's easy to forget the little things that trip you up, but documenting them helps
+                            for future projects and for anyone else reading my code.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+    </div>
+    <footer>
+        <div class="foot">
+            &copy; 2025 - Picture Slide Show
+            &nbsp;|&nbsp; <a href="https://purple-glacier-08ca4f60f.6.azurestaticapps.net/">Cover</a>
+            &nbsp;|&nbsp; <a asp-page="/documentation">Documentation</a>
+            &nbsp;|&nbsp; <a asp-page="#">Back to Top</a>
+        </div>
+    </footer>
+</body>
+
+</html>
