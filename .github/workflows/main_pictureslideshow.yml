@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy ASP.Net Core app to Azure Web App - PictureSlideShow
+name: Build and deploy ASP.Net Core app to Azure Web App - pictureslideshow
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 'v9.0'
+          dotnet-version: '9.x'
 
       - name: Build with dotnet
         run: dotnet build --configuration Release
@@ -54,15 +54,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_F4F995A280494D84B6C87EC0AAD3D9BB }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_AFA2C064237E45DDB41DCDE29CCDBD70 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_981D770A9D1F4B8EA6D3A9FC9D5B62FF }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_18F909629DAB4BF0BB8FB1CFB4DE2A13 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_FED994762B4B49A989E85D91B52A84A4 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_CE850E155D444247A065BC095C991E2F }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'PictureSlideShow'
+          app-name: 'pictureslideshow'
           slot-name: 'Production'
           package: .
           
